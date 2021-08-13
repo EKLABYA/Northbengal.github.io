@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
+    <link rel="stylesheet" href="gallery-clean.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <title>Document</title>
+    <style>
+       header {
+  position: relative;
+  background-color: black;
+  height: 75vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+header video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+header .container {
+  position: relative;
+  z-index: 2;
+}
+
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+/* Media Query for devices withi coarse pointers and no hover functionality */
+
+/* This will use a fallback image instead of a video for devices that commonly do not support the HTML5 video element */
+
+@media (pointer: coarse) and (hover: none) {
+  header {
+    background: url('./image/lamhoney.jpg') black no-repeat center center scroll;
+  }
+
+  header video {
+    display: none;
+  }
+}
+       .divider {                /* minor cosmetics */
+            display: table; 
+            font-size: 24px; 
+            text-align: center; 
+            width: 75%;             /* divider width */
+            margin: 40px auto;          /* spacing above/below */
+        }
+        .divider span { display: table-cell; position: relative; }
+        .divider span:first-child, .divider span:last-child {
+            width: 50%;
+            top: 13px;              /* adjust vertical align */
+            -moz-background-size: 100% 2px;   /* line width */
+            background-size: 100% 2px;      /* line width */
+            background-position: 0 0, 0 100%;
+            background-repeat: no-repeat;
+        }
+        .divider span:first-child {       /* color changes in here */
+            background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), to(#000));
+            background-image: -webkit-linear-gradient(180deg, transparent, #000);
+            background-image: -moz-linear-gradient(180deg, transparent, #000);
+            background-image: -o-linear-gradient(180deg, transparent, #000);
+            background-image: linear-gradient(90deg, transparent, #000);
+        }
+        .divider span:nth-child(2) {
+            color:black; padding: 0px 5px; width: auto; white-space: nowrap;
+        }
+        .divider span:last-child {        /* color changes in here */
+            background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#000), to(transparent));
+            background-image: -webkit-linear-gradient(180deg, #000, transparent);
+            background-image: -moz-linear-gradient(180deg, #000, transparent);
+            background-image: -o-linear-gradient(180deg, #000, transparent);
+            background-image: linear-gradient(90deg, #000, transparent);
+        }
+        /* #xxx{
+          background-image: url("kalingpon.jpg");
+          background-size: cover;
+          
+        } */
+        #xx{
+          margin: 3%;
+            position: relative;
+
+        }
+        #xx1
+        {
+          position: absolute;
+        z-index: 999;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        top: 30%; /* Adjust this value to move the positioned div up and down */
+        text-align: center;
+        width: 30%;
+        }
+        #xx2{
+          position: absolute;
+        z-index: 999;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        top: 5%; /* Adjust this value to move the positioned div up and down */
+        text-align: center;
+        width: 30%;
+        color:white;
+
+        }
+        #xx3{
+          position: absolute;
+        z-index: 999;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        top: 60%; /* Adjust this value to move the positioned div up and down */
+        text-align: center;
+        width: 30%;
+        color:white;
+
+        }
+       
+
+    </style>
+</head>
+<body>
+  <div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light"> 
+        <a class="navbar-brand" href="#">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item ">
+              <a class="nav-link" href="#hot"> Hotels<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#hot">Travels</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#footer">About me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href=""></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      </div>
+      <div id="carouselExampleControls" class="carousel slide carousel-fade" data-ride="carousel">
+        <div class="carousel-inner">
+           <div class="carousel-item active">
+            <img class="d-block w-100" src="./image/intro.jpg"  alt="Second slide" >
+          </div> 
+      
+          <div class="carousel-item">
+            <img class="d-block w-100" src="./image/Mounatin4.jpg" style="height: 80%;" alt="Second slide" >
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="./image/Montain2.jpg" alt="Third slide" style="transform: scale(1.5);">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      <div class="divider"><span></span><span>Bengal</span><span></span></div>
+ 
+<div class="container gallery-container">
+
+  
+  <div class="tz-gallery">
+
+      <div class="row">
+
+          <div class="col-sm-6 col-md-4 " data-aos="zoom-in-left" data-aos-duration="2000"style="text-align: center;">
+              <div class="thumbnail">
+                  <a class="lightbox" href="https://www.thrillophilia.com/cities/darjeeling">
+                      <img src="./image/DARJEELING4.jpg" style="width:300px;height:150px" alt="Park">
+                  </a>
+                  <div class="caption" style="text-align: center;">
+                    <h4>Darjeeling</h4>
+                    <hr class="w-50" style="text-align:center;color:black;">
+                   </div>
+                 
+              </div>
+          </div>
+          <div class="col-sm-6 col-md-4" data-aos="zoom-in-right" data-aos-duration="2000" style="text-align: center;">
+              <div class="thumbnail">
+                  <a class="lightbox" href="https://www.thrillophilia.com/cities/kalimpong"  >
+                      <img src="./image/KALINGPONG22.jpg"  style="width:300px;height:150px" alt="Bridge">
+                  </a>
+                  <div class="caption" style="text-align: center;">
+                    <h4>Kalingpong</h4>
+                    <hr class="w-50" style="text-align:center;color:black;">
+                   </div>
+                 
+              </div>
+          </div>
+          <div class="col-sm-6 col-md-4" data-aos="zoom-in-left" data-aos-duration="2000" style="text-align:center">
+              <div class="thumbnail">
+                  <a class="lightbox" href="http://lamahattahomestay.com/">
+                      <img src="./image/Lamhatta2.jpg"  style="width:300px;height:150px" alt="Tuneel">
+                  </a>
+                  <div class="caption" style="text-align: center;">
+                    <h4>Lamahatta</h4>
+                    <hr class="w-50" style="text-align:center;color:black;">
+                   </div>
+                 
+              </div>
+          </div>
+          <div class="col-sm-6 col-md-4"  data-aos="zoom-out-up" data-aos-duration="2000" style="text-align:center">
+              <div class="thumbnail">
+                  <a class="lightbox" href="http://www.east-himalaya.com/buxa.php">
+                      <img src="./image/Buxa.jpg"  style="width:300px;height:150px" alt="Coast">
+                  </a>
+                  <div class="caption" style="text-align: center;">
+                    <h4>Buxa</h4>
+                    <hr class="w-50" style="text-align:center;color:black;">
+                   </div>
+                 
+              </div>
+          </div>
+          <div class="col-sm-6 col-md-4" data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="1500" style="text-align:center">
+              <div class="thumbnail">
+                  <a class="lightbox" href="https://www.tripadvisor.in/Attraction_Review-g304557-d3912758-Reviews-Lava-Darjeeling_Darjeeling_District_West_Bengal.html">
+                      <img src="./image/Lava1.jpg"  style="width:300px;height:150px"  alt="Rails">
+                  </a>
+                  <div class="caption" style="text-align: center;">
+                    <h4>Lava</h4>
+                    <hr class="w-50" style="text-align:center;color:black;">
+                   </div>
+            
+              </div>
+          </div>
+          <div class="col-sm-6 col-md-4 " data-aos="fade-up" data-aos-duration="2000"  data-aos-easing="linear" style="text-align:center">
+              <div class="thumbnail">
+                  <a class="lightbox" href="https://www.holidify.com/places/mirik/">
+                      <img src="./image/Mirik.jpg"  style="width:300px;height:150px"  alt="Traffic">
+                  </a>
+                  <div class="caption" style="text-align: center;">
+                    <h4>Mirik</h4>
+                    <hr class="w-50" style="text-align:center;color:black;">
+                   </div>
+               
+              </div>
+          </div>
+      </div>
+
+  </div>
+
+</div>
+<div class="divider12" style="text-align:center" id="hot"> <span><h5>Hotels & Travels</h5></span></div>
+<hr class="w-25 bg-info" style="text-align:center">
+
+  <div class="container"  id="xxx" >
+    <div class="container mx-auto" id="xx" style="text-align:center"  data-aos="fade-left" data-aos-duration="1500"  data-aos-easing="linear">
+      <img src="./image/Hotel4.jpg" style="height:350px" class="img-fluid" alt="">
+    
+    <button id="xx1"  class="btn btn-info" data-aos="fade-left" data-aos-duration="1500"  data-aos-easing="linear"><a href="https://www.booking.com/" style="text-decoration: none;color: aliceblue;"><h3 >Hotels</h3></a></button>  
+    <button id="xx3"  class="btn btn-info" data-aos="fade-right" data-aos-duration="1500"  data-aos-easing="linear"><a href="https://www.makemytrip.com" style="text-decoration: none;color: aliceblue;"><h3 >Travels</h3></a></button>  
+ 
+  </div>
+  </div>
+  <div class="divider12" style="text-align:center" id="hot"> <span><h5>Explore Bengal</h5></span></div>
+  <hr class="w-25 bg-info" style="text-align:center">
+  <header class="container">
+
+    <!-- This div is  intentionally blank. It creates the transparent black overlay over the video which you can modify in the CSS -->
+    <div class="overlay " ></div>
+  
+    <!-- The HTML5 video element that will create the background video on the header -->
+    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+      <source src="./image/video.mp4" type="video/mp4">
+    </video>
+  
+    <!-- The header content -->
+    <div class="container h-100">
+      <div class="d-flex h-100 text-center align-items-center">
+        <div class="w-100 text-white">
+          <h1 class="display-3">Bengal</h1>
+          <p class="lead mb-0">There is something infinitely healing in the repeated refrains of nature—the assurance that dawn comes after night, and spring after winter.</p>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <footer class="text-center text-white" id="footer" style="background-color: #f1f1f1;" class="container">
+    <!-- Grid container -->
+    <div class="container pt-4">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="#"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+  
+        <!-- Twitter -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-twitter"></i
+        ></a>
+  
+        <!-- Google -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-google"></i
+        ></a>
+  
+        <!-- Instagram -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="https://www.instagram.com/eklabya_roy"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-instagram"></i
+        ></a>
+  
+        <!-- Linkedin -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <!-- Github -->
+        <!-- <a
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-github"></i
+        ></a> -->
+      </section>
+      <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+  
+    <!-- Copyright -->
+    <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2020 Copyright:
+      <a class="text-dark" >Roy'swebsite.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</div>
+
+
+</body>
+</html>
